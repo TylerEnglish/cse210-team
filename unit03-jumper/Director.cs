@@ -17,19 +17,19 @@ namespace unit03_jumper
         {
             while (isPlaying)
             {
-                GetInputs();
-                DoUpdates();
-                DoOutputs();
+                Display();
+                UserInterfacing();
+                Updating();
             }
         }
-
-        public void GetInputs()
+    /// Displays the Jumper and prompts.
+        public void Display()
         {
             ;
         }
 
-    /// Updates
-        public void DoUpdates()
+    /// User interaction will be handeled here.
+        public void UserInterfacing()
         {
             if (!isPlaying)
             {
@@ -37,8 +37,8 @@ namespace unit03_jumper
             }
         }
     
-    /// Asks player if they are still playing.
-        public void DoOutputs()
+    /// Asks player if they are still playing, and updating game.
+        public void Updating()
         {
             if (!isPlaying)
             {
