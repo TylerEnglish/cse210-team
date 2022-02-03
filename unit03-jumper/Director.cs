@@ -5,6 +5,9 @@ namespace unit03_jumper
     class Director
     {
         bool isPlaying = true;
+        Word word = new Word();
+        Jumper jumper = new Jumper();
+        Interface iFace = new Interface();
         public Director()
         {
             ;
