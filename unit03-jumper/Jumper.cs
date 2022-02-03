@@ -8,5 +8,11 @@ namespace unit03_jumper
         {
             ;
         }
+
+    /// This function displays the Jumper.
+        public void display()
+        {
+            ;
+        }
     }
 }
