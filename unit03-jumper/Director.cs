@@ -7,7 +7,7 @@ namespace unit03_jumper
         bool isPlaying = true;
         public Director()
         {
-
+            ;
         }
 
         public void StartGame()
@@ -22,7 +22,7 @@ namespace unit03_jumper
 
         public void GetInputs()
         {
-
+            ;
         }
 
     /// Updates
