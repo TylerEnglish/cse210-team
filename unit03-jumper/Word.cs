@@ -4,9 +4,10 @@ namespace unit03_jumper
 {
     class Word
     {
-        private string currentWord;
-        private string guess;
-        private int randoNum;
+        private string currentWord = "";
+        private string guess = "";
+        private int randoNum = 0;
+
         public Word()
         {
 
