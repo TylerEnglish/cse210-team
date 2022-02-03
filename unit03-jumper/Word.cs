@@ -39,6 +39,10 @@ namespace unit03_jumper
             return currentWord;
         }
 
+        public int getRandoNum()
+        {
+            return randoNum;
+        }
 
     }
 }
