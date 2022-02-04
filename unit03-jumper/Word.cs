@@ -31,25 +31,32 @@ namespace unit03_jumper
             };
         }
 
+// Setter for Guess
         public void setGuess(string guess)
         {  
             this.guess = guess;
         }
 
+// Getter for Guess
         public string getGuess()
         {
             return guess;
         }
 
+// Setter for Word
         public void setWord(string word)
         {  
             currentWord = word;
         }
 
+// Getter for Word
+
         public string getWord()
         {
             return currentWord;
         }
+
+// Getter for RandoNum
 
         public int getRandoNum()
         {
