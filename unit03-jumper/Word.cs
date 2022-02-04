@@ -18,7 +18,7 @@ namespace unit03_jumper
         public void FindRandoNum()
         {
             Random random = new Random();
-            randoNum = random.Next(1,5);
+            randoNum = random.Next(0,words.Count + 1 );
         }
 
         public void checkWord(string UserGuess)
