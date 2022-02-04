@@ -25,7 +25,7 @@ namespace unit03_jumper
     /// Displays the Jumper and prompts.
         public void Display()
         {
-            ;
+            jumper.display();
         }
 
     /// User interaction will be handeled here.
