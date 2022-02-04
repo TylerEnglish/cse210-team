@@ -1,9 +1,11 @@
 using System;
+using System.Collections.Generic;
 
 namespace unit03_jumper
 {
     class Word
     {
+        private List<string> words = new List<string>();
         private string currentWord = "";
         private string guess = "";
         private int randoNum = 0;

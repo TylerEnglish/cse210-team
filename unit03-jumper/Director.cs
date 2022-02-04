@@ -10,7 +10,7 @@ namespace unit03_jumper
         Interface iFace = new Interface();
         public Director()
         {
-            ;
+            
         }
 
         public void StartGame()
