@@ -5,6 +5,7 @@ namespace unit03_jumper
     class Jumper
     {
         string lilman = " Jumper";
+        bool isAlive = true;
         public Jumper()
         {
             ;
@@ -23,6 +24,20 @@ namespace unit03_jumper
             // Console.Write($" /|\ \n");
             // Console.Write($" / \ \n");
 
+        }
+        
+// Setter for Alive
+
+        public void setAlive(bool alive)
+        {
+            isAlive = alive;
+        }
+
+// Getter for Alive
+
+        public bool getAlive()
+        {
+            return isAlive;
         }
     }
 }

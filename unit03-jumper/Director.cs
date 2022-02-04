@@ -8,6 +8,7 @@ namespace unit03_jumper
         Word word = new Word();
         Jumper jumper = new Jumper();
         Interface iFace = new Interface();
+        int fails = 0;
         public Director()
         {
             
@@ -21,13 +22,13 @@ namespace unit03_jumper
                 UserInterfacing();
                 Updating();
             }
+            Console.WriteLine($"\nThanks for Playing!");
         }
     /// Displays the Jumper and prompts.
         public void Display()
         {
             jumper.display();
             iFace.ask();
-            
         }
 
     /// User interaction will be handeled here.
@@ -37,7 +38,16 @@ namespace unit03_jumper
             {
                 return;
             }
-
+            Console.Write("Are you still playing? [y/n]: ");
+            string playing = Console.ReadLine();
+            if (playing == "y")
+            {
+                return;
+            }
+            else
+            {
+                isPlaying = false;
+            }
         }
     
     /// Asks player if they are still playing, and updating game.
@@ -46,6 +56,21 @@ namespace unit03_jumper
             if (!isPlaying)
             {
                 return;
+            }
+            isAlive();
+            isPlaying = jumper.getAlive();
+        }
+
+// Check if the Jumper is alive.
+        public void isAlive()
+        {
+            if (fails < 5)
+            {
+                jumper.setAlive(true);
+            }
+            else
+            {
+                jumper.setAlive(false);
             }
         }
 
