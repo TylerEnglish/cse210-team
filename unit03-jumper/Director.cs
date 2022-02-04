@@ -16,6 +16,8 @@ namespace unit03_jumper
 
         public void StartGame()
         {
+            word.FindRandoNum();
+            word.setWord();
             while (isPlaying)
             {
                 Display();
@@ -72,6 +74,18 @@ namespace unit03_jumper
             {
                 jumper.setAlive(false);
             }
+        }
+
+        // This Checks each letter of the word to see if it matches the guessed letter.
+        public void checkWord(string UserGuess)
+        {
+            for (int i = 0; i < word.getWordCount() + 1; i++)
+            {
+                if (word.getWord()[i] == UserGuess[0])
+                {
+
+                }
+            };
         }
 
     }

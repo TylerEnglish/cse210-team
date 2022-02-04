@@ -6,7 +6,7 @@ namespace unit03_jumper
     class Word
     {
         private List<string> words = new List<string>();
-        private string currentWord = "";
+        private string currentWord = "break";
         private string guess = "";
         private int randoNum = 0;
 
@@ -21,17 +21,6 @@ namespace unit03_jumper
             randoNum = random.Next(0,words.Count + 1 );
         }
 
-        public void checkWord(string UserGuess)
-        {
-            for (int i = 0; i < 1 ; i++)
-            {
-                if (currentWord[i] == UserGuess[0])
-                {
-                    // This checks each letter of the word to see if it 
-                    // matches the guessed letter.
-                }
-            };
-        }
 
 // Setter for Guess
         public void setGuess(string guess)
@@ -46,9 +35,9 @@ namespace unit03_jumper
         }
 
 // Setter for Word
-        public void setWord(string word)
+        public void setWord()
         {  
-            currentWord = word;
+            currentWord = words[randoNum];
         }
 
 // Getter for Word
@@ -64,6 +53,36 @@ namespace unit03_jumper
         {
             return randoNum;
         }
+
+// Getter for List
+
+        public string getList(int x)
+        {
+            return words[x];
+        }
+
+// Getter for word count
+
+        public int getWordCount()
+        {
+            int x = currentWord.Count;
+            return x;
+        }
+
+        public void checkWord(string UserGuess)
+        {
+            for (int i = 0; i < currentWord.Count + 1; i++)
+            {
+                if (currentWord[i] == UserGuess[0])
+                {
+                    // This checks each letter of the word to see if it 
+                    // matches the guessed letter.
+                }
+            };
+        }
+
+
+
 
     }
 }
