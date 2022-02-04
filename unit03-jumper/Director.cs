@@ -27,7 +27,6 @@ namespace unit03_jumper
         {
             jumper.display();
             iFace.ask();
-            
         }
 
     /// User interaction will be handeled here.
