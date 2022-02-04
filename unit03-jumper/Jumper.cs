@@ -26,10 +26,15 @@ namespace unit03_jumper
 
         }
         
+// Setter for Alive
+
         public void setAlive(bool alive)
         {
             isAlive = alive;
         }
+
+// Getter for Alive
+
         public bool getAlive()
         {
             return isAlive;

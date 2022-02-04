@@ -10,12 +10,15 @@ namespace unit03_jumper
             ;
         }
 
+// Ask user what letter they guess.
         public void ask()
         {
             Console.Write($"Guess a Letter [a-z]: ");
             letterGuess = Console.ReadLine();
         }
         
+// Getter for Guess
+
         public string getGuess()
         {
             return letterGuess;
