@@ -42,11 +42,11 @@ namespace unit03_jumper
             string playing = Console.ReadLine();
             if (playing == "y")
             {
-                jumper.setAlive(true);
+                return;
             }
             else
             {
-                jumper.setAlive(false);
+                isPlaying = false;
             }
         }
     
