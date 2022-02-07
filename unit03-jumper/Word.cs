@@ -66,13 +66,13 @@ namespace unit03_jumper
 
         public int getWordCount()
         {
-            int x = currentWord.Count;
+            int x = currentWord.Length;
             return x;
         }
 
         public void checkWord(string UserGuess)
         {
-            for (int i = 0; i < currentWord.Count + 1; i++)
+            for (int i = 0; i < currentWord.Length + 1; i++)
             {
                 if (currentWord[i] == UserGuess[0])
                 {
