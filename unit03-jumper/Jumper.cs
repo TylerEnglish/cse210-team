@@ -17,14 +17,19 @@ namespace unit03_jumper
         public void display()
         {
             // Placeholder output for displaying word
-            Console.WriteLine($"_ _ _ _ _ ");
-            // Placeholder output for displaying jumper
-            Console.Write($"\n{aliveLilman}\n");
+            Console.WriteLine($"_ _ _ _ _ \n");
 
+            Console.Write($"{parachute}");
+
+            if (isAlive)
+            {
+                Console.Write($"\n{aliveLilman}\n");  
+            } 
+            else
+            {
+                Console.Write($"\n{deadLilman}\n");
+            }
             Console.Write("\n^^^^^^^^\n");
-            // Console.Write($"  O \n");
-            // Console.Write($" /|\ \n");
-            // Console.Write($" / \ \n");
 
         }
         
