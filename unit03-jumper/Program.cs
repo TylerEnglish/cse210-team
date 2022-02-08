@@ -11,4 +11,3 @@ namespace unit03_jumper
         }
     }
 }
-// This is a comment B.
