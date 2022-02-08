@@ -35,6 +35,18 @@ namespace unit03_jumper
             isAlive = alive;
         }
 
+        public void setParachute()
+        {
+            parachute.Add("  ____");
+            parachute.Add(" /____\\");
+            parachute.Add(" \\    /");
+            parachute.Add("  \\  /");
+        }
+        public List<string> getParachute()
+        {
+            return parachute;
+        }
+
 // Getter for Alive
 
         public bool getAlive()
