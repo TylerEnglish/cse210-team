@@ -16,13 +16,16 @@ namespace unit03_jumper
 
         public void StartGame()
         {
-            word.FindRandoNum();
-            word.setWord();
             while (isPlaying)
             {
-                Display();
-                UserInterfacing();
-                Updating();
+                word.FindRandoNum();
+                word.setWord();
+                while (jumper.getAlive())
+                {
+                    Display();
+                    UserInterfacing();
+                    Updating();
+                }
             }
             Console.WriteLine($"\nThanks for Playing!");
         }
