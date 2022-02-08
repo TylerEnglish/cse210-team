@@ -7,7 +7,7 @@ namespace unit03_jumper
         private string letterGuess = "";
         public Interface()
         {
-            ;
+            
         }
 
 // Ask user what letter they guess.
