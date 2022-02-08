@@ -9,6 +9,7 @@ namespace unit03_jumper
         Jumper jumper = new Jumper();
         Interface iFace = new Interface();
         int fails = 0;
+        bool gameGoing = true;
         public Director()
         {
             
@@ -20,7 +21,7 @@ namespace unit03_jumper
             {
                 word.FindRandoNum();
                 word.setWord();
-                while (jumper.getAlive())
+                while (jumper.getAlive() && gameGoing)
                 {
                     Display();
                     UserInterfacing();
