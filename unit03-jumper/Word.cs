@@ -13,7 +13,6 @@ namespace unit03_jumper
 
         public Word()
         {
-
         }
     // Creates a random number to select a word from the list.
         public void FindRandoNum()
