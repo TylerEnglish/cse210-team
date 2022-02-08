@@ -20,7 +20,7 @@ namespace unit03_jumper
             Console.WriteLine($"_ _ _ _ _ \n");
 
             Console.Write($"{parachute}");
-            
+
             if (isAlive)
             {
                 Console.Write($"\n{aliveLilman}\n");  
@@ -30,9 +30,6 @@ namespace unit03_jumper
                 Console.Write($"\n{deadLilman}\n");
             }
             Console.Write("\n^^^^^^^^\n");
-            // Console.Write($"  O \n");
-            // Console.Write($" /|\ \n");
-            // Console.Write($" / \ \n");
 
         }
         
