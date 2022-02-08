@@ -22,13 +22,13 @@ namespace unit03_jumper
             {
                 word.FindRandoNum();
                 word.setWord();
-                while (jumper.getAlive() && gameGoing)
+                while (jumper.getAlive())
                 {
                     Display();
                     UserInterfacing();
                     Updating();
                 }
-                Console.Write($"Do you want to play again?[y/n] ");
+                Console.Write($"Do you want to play again? [y/n] ");
                 string playAgain = Console.ReadLine();
                 if (playAgain == "y")
                 {
@@ -39,7 +39,7 @@ namespace unit03_jumper
                     isPlaying = false;
                 }
             }
-            Console.WriteLine($"\nThanks for Playing!");
+            Console.WriteLine($"\nThank you for Playing!");
         }
     /// Displays the Jumper and prompts.
         public void Display()
@@ -50,7 +50,7 @@ namespace unit03_jumper
     /// User interaction will be handeled here.
         public void UserInterfacing()
         {
-            if (!isPlaying)
+            if (!jumper.getAlive())
             {
                 return;
             }
@@ -66,8 +66,9 @@ namespace unit03_jumper
             }
             else
             {
-                jumper.setAlive(false);
+                fails = 5;
             }
+
         }
     
     /// Asks player if they are still playing, and updating game.
@@ -77,7 +78,7 @@ namespace unit03_jumper
             {
                 return;
             }
-            // isAlive();
+            isAlive();
             // isPlaying = jumper.getAlive();
         }
 
