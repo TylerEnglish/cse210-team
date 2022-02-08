@@ -39,7 +39,7 @@ namespace unit03_jumper
             {
                 return;
             }
-            iFace.ask();
+            iFace.letterChecker();
 
 
     /// This will be commented out.
