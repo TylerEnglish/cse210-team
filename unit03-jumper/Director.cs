@@ -30,7 +30,6 @@ namespace unit03_jumper
         public void Display()
         {
             jumper.display();
-            iFace.ask();
         }
 
     /// User interaction will be handeled here.
@@ -40,6 +39,10 @@ namespace unit03_jumper
             {
                 return;
             }
+            iFace.ask();
+
+
+    /// This will be commented out.
             Console.Write("Are you still playing? [y/n]: ");
             string playing = Console.ReadLine();
             if (playing == "y")
