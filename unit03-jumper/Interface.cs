@@ -23,5 +23,14 @@ namespace unit03_jumper
         {
             return letterGuess;
         }
+
+        //letter checker
+        public void letterChecker()
+        {
+            do
+            {
+                
+            } while (letterGuess.Length != 1 );
+        }
     }
 }
