@@ -56,7 +56,7 @@ namespace unit03_jumper
             }
             else
             {
-                isPlaying = false;
+                jumper.setAlive(false);
             }
         }
     
@@ -68,7 +68,7 @@ namespace unit03_jumper
                 return;
             }
             isAlive();
-            isPlaying = jumper.getAlive();
+            // isPlaying = jumper.getAlive();
         }
 
         // Check if the Jumper is alive.
