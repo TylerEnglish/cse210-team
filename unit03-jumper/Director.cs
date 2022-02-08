@@ -15,6 +15,7 @@ namespace unit03_jumper
             
         }
 
+    /// This runs the Game loop.
         public void StartGame()
         {
             while (isPlaying)
@@ -70,7 +71,7 @@ namespace unit03_jumper
             isPlaying = jumper.getAlive();
         }
 
-// Check if the Jumper is alive.
+        // Check if the Jumper is alive.
         public void isAlive()
         {
             if (fails < 5)
