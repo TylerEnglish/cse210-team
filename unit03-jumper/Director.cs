@@ -28,6 +28,16 @@ namespace unit03_jumper
                     UserInterfacing();
                     Updating();
                 }
+                Console.Write($"Do you want to play again?[y/n] ");
+                string playAgain = Console.ReadLine();
+                if (playAgain == "y")
+                {
+                    jumper.setAlive(true);
+                }
+                else if(playAgain != "y")
+                {
+                    isPlaying = false;
+                }
             }
             Console.WriteLine($"\nThanks for Playing!");
         }
@@ -48,7 +58,7 @@ namespace unit03_jumper
 
 
     /// This will be commented out.
-            Console.Write("Are you still playing? [y/n]: ");
+            Console.Write("Are you still Alive? [y/n]: ");
             string playing = Console.ReadLine();
             if (playing == "y")
             {
@@ -63,11 +73,11 @@ namespace unit03_jumper
     /// Asks player if they are still playing, and updating game.
         public void Updating()
         {
-            if (!isPlaying)
+            if (jumper.getAlive() == false)
             {
                 return;
             }
-            isAlive();
+            // isAlive();
             // isPlaying = jumper.getAlive();
         }
 
