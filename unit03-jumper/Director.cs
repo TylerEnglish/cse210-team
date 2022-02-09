@@ -29,6 +29,7 @@ namespace unit03_jumper
     /// Displays the Jumper and prompts.
         public void Display()
         {
+            jumper.setParachute();
             jumper.display();
         }
 

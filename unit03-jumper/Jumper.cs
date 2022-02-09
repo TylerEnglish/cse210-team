@@ -7,7 +7,7 @@ namespace unit03_jumper
     {
         private List<string> parachute = new List<string>();
         private string aliveLilman = ("  O \n /|\\ \n / \\ \n");
-        private string deadLilman = ("  X \n /|\\ \n / \\ \n");
+        private string deadLilman = ("   X \n  /|\\ \n  / \\ \n");
         private bool isAlive = true;
         public Jumper()
         {
@@ -19,15 +19,18 @@ namespace unit03_jumper
             // Placeholder output for displaying word
             Console.WriteLine($"_ _ _ _ _ \n");
 
-            Console.Write($"{parachute}");
+            for (int i = 0; i < parachute.Count; i++)
+            {
+                Console.WriteLine(parachute[i]);
+            }
 
             if (isAlive)
             {
-                Console.Write($"\n{aliveLilman}\n");  
+                Console.Write($"{aliveLilman}\n");  
             } 
             else
             {
-                Console.Write($"\n{deadLilman}\n");
+                Console.Write($"{deadLilman}\n");
             }
             Console.Write("\n^^^^^^^^\n");
 
@@ -42,10 +45,10 @@ namespace unit03_jumper
 
         public void setParachute()
         {
-            parachute.Add("  ____");
-            parachute.Add(" /____\\");
-            parachute.Add(" \\    /");
-            parachute.Add("  \\  /");
+            parachute.Add(" ____");
+            parachute.Add("/____\\");
+            parachute.Add("\\    /");
+            parachute.Add(" \\  /");
         }
         public List<string> getParachute()
         {
