@@ -29,7 +29,7 @@ namespace unit03_jumper
         {
             do
             {
-                
+                ask();
             } while (letterGuess.Length != 1 );
         }
     }

@@ -9,22 +9,37 @@ namespace unit03_jumper
         Jumper jumper = new Jumper();
         Interface iFace = new Interface();
         int fails = 0;
+        bool gameGoing = true;
         public Director()
         {
             
         }
 
+    /// This runs the Game loop.
         public void StartGame()
         {
-            word.FindRandoNum();
-            word.setWord();
             while (isPlaying)
             {
-                Display();
-                UserInterfacing();
-                Updating();
+                word.FindRandoNum();
+                word.setWord();
+                while (jumper.getAlive())
+                {
+                    Display();
+                    UserInterfacing();
+                    Updating();
+                }
+                Console.Write($"Do you want to play again? [y/n] ");
+                string playAgain = Console.ReadLine();
+                if (playAgain == "y")
+                {
+                    jumper.setAlive(true);
+                }
+                else if(playAgain != "y")
+                {
+                    isPlaying = false;
+                }
             }
-            Console.WriteLine($"\nThanks for Playing!");
+            Console.WriteLine($"\nThank you for Playing!");
         }
     /// Displays the Jumper and prompts.
         public void Display()
@@ -36,15 +51,15 @@ namespace unit03_jumper
     /// User interaction will be handeled here.
         public void UserInterfacing()
         {
-            if (!isPlaying)
+            if (!jumper.getAlive())
             {
                 return;
             }
-            iFace.ask();
+            iFace.letterChecker();
 
 
     /// This will be commented out.
-            Console.Write("Are you still playing? [y/n]: ");
+            Console.Write("Are you still Alive? [y/n]: ");
             string playing = Console.ReadLine();
             if (playing == "y")
             {
@@ -52,22 +67,23 @@ namespace unit03_jumper
             }
             else
             {
-                isPlaying = false;
+                fails = 5;
             }
+
         }
     
     /// Asks player if they are still playing, and updating game.
         public void Updating()
         {
-            if (!isPlaying)
+            if (jumper.getAlive() == false)
             {
                 return;
             }
             isAlive();
-            isPlaying = jumper.getAlive();
+            // isPlaying = jumper.getAlive();
         }
 
-// Check if the Jumper is alive.
+        // Check if the Jumper is alive.
         public void isAlive()
         {
             if (fails < 5)

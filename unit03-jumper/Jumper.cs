@@ -17,7 +17,7 @@ namespace unit03_jumper
         public void display()
         {
             // Placeholder output for displaying word
-            Console.WriteLine($"_ _ _ _ _ \n");
+            Console.WriteLine($"\n_ _ _ _ _ \n");
 
             for (int i = 0; i < parachute.Count; i++)
             {
@@ -32,7 +32,7 @@ namespace unit03_jumper
             {
                 Console.Write($"{deadLilman}\n");
             }
-            Console.Write("\n^^^^^^^^\n");
+            Console.Write("\n^^^^^^^^\n\n");
 
         }
         
