@@ -13,6 +13,7 @@ namespace unit03_jumper
 
         public Word()
         {
+            
         }
     // Creates a random number to select a word from the list.
         public void FindRandoNum()
@@ -22,10 +23,18 @@ namespace unit03_jumper
         }
 
 
-
+        public void Display()
+        {
+            for (int i = 0; i < guess.Count; i++)
+            {
+                Console.Write($"{guess[i]} ");
+            }
+            Console.WriteLine();
+        }
 // Setter for Word
         public void setWord()
         {  
+            
             currentWord = words[randoNum];
         }
 
@@ -72,9 +81,10 @@ namespace unit03_jumper
 
         public void setGuess()
         {
+            
             for(int i = 0; i < currentWord.Length; i++)
             {
-                guess.Add("_ ");
+                guess.Add("_");
             }
             
         }
@@ -95,7 +105,18 @@ namespace unit03_jumper
             return guess;
         }
 
+        public void SetGuess(int index, string userInput)
+        {
+            guess[index] = userInput;
+        }
 
+        public void deleteGuess()
+        {
+            for (int i = 0; i < currentWord.Length; i++)
+            {
+                guess.Remove(guess[0]);
+            }
+        }
 
 
     }

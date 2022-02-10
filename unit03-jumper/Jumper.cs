@@ -11,13 +11,14 @@ namespace unit03_jumper
         private bool isAlive = true;
         public Jumper()
         {
+            
         }
 
     /// This function displays the Jumper.
         public void display()
         {
             // Placeholder output for displaying word
-            Console.WriteLine($"\n_ _ _ _ _ \n");
+            
 
             for (int i = 0; i < parachute.Count; i++)
             {
@@ -26,13 +27,13 @@ namespace unit03_jumper
 
             if (isAlive)
             {
-                Console.Write($"{aliveLilman}\n");  
+                Console.Write($"{aliveLilman}");  
             } 
             else
             {
-                Console.Write($"{deadLilman}\n");
+                Console.Write($"{deadLilman}");
             }
-            Console.Write("\n^^^^^^^^\n\n");
+            Console.Write("^^^^^^^^\n");
 
         }
         
@@ -46,7 +47,8 @@ namespace unit03_jumper
         public void setParachute()
         {
             parachute.Add(" ____");
-            parachute.Add("/____\\");
+            parachute.Add("/    \\");
+            parachute.Add(" ---- ");
             parachute.Add("\\    /");
             parachute.Add(" \\  /");
         }
@@ -61,5 +63,13 @@ namespace unit03_jumper
         {
             return isAlive;
         }
+
+        public void removeParachute()
+        {
+            parachute.Remove(parachute[0]);
+        }
+
+        
     }
 }
+
