@@ -6,8 +6,8 @@ namespace unit04_greed
     {
         static void Main(string[] args)
         {
-            Director director = new Director();
-            director.StartGame();
+            // Director director = new Director();
+            // director.StartGame();
         }
     }
 }
