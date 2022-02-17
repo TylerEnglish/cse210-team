@@ -1,8 +1,8 @@
 using System;
 
-namespace unit03_jumper
+namespace unit04_greed
 {
-    class Director
+    public class Director
     {
         public Director()
         {
