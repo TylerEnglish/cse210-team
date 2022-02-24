@@ -58,5 +58,6 @@ namespace Unit04.Game.Services
 
             return direction;
         }
+        
     }
 }

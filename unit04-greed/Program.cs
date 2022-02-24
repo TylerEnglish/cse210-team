@@ -22,7 +22,7 @@ namespace Unit04
         private static int COLS = 60;
         private static int ROWS = 40;
         private static string CAPTION = "Robot Finds Kitten";
-        private static string DATA_PATH = "Data/messages.txt";
+        //private static string DATA_PATH = "Data/messages.txt";
         private static Color WHITE = new Color(255, 255, 255);
         private static int DEFAULT_ARTIFACTS = 40;
 
@@ -53,14 +53,14 @@ namespace Unit04
             cast.AddActor("robot", robot);
 
             // load the messages
-            List<string> messages = File.ReadAllLines(DATA_PATH).ToList<string>();
+            //List<string> messages = File.ReadAllLines(DATA_PATH).ToList<string>();
 
             // create the artifacts
             Random random = new Random();
             for (int i = 0; i < DEFAULT_ARTIFACTS; i++)
             {
                 string text = ((char)random.Next(33, 126)).ToString();
-                string message = messages[i];
+                //string message = messages[i];
 
                 int x = random.Next(1, COLS);
                 int y = random.Next(1, ROWS);
@@ -77,7 +77,7 @@ namespace Unit04
                 artifact.SetFontSize(FONT_SIZE);
                 artifact.SetColor(color);
                 artifact.SetPosition(position);
-                artifact.SetMessage(message);
+                //artifact.SetMessage(message);
                 cast.AddActor("artifacts", artifact);
             }
 
