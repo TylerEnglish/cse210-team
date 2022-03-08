@@ -71,7 +71,7 @@ namespace Unit04.Game.Directing
             SpawnNewGems(cast);
             SpawnNewRocks(cast);
             
-            Actor scoreBoard = (ScoreBoard)cast.GetFirstActor("scoreBoard");
+            ScoreBoard scoreBoard = (ScoreBoard)cast.GetFirstActor("scoreBoard");
             Actor robot = cast.GetFirstActor("robot");
             List<Actor> fallingObjects = cast.GetActors("fallingObjects");
 
@@ -94,7 +94,7 @@ namespace Unit04.Game.Directing
                 {
                     FallingObject obj = (FallingObject) actor;
                     int value = obj.GetValue();
-                    //scoreBoard.AddPoints(value);
+                    // scoreBoard.AddPoints(value);
 
                     removeArtifacts.Add(obj);
                 }
