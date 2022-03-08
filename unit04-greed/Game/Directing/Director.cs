@@ -14,7 +14,7 @@ namespace Unit04.Game.Directing
     public class Director
     {
         public int CELL_SIZE = 10;
-        public int Max_Y = 800;
+        public int Max_Y = 570;
         public int MAX_X = 800;
 
         public int GEM_SPAWN_RATE = 10;
@@ -44,7 +44,7 @@ namespace Unit04.Game.Directing
                 GetInputs(cast);
                 DoUpdates(cast);
                 DoOutputs(cast);
-                // RemoveOffScreen(cast);
+                RemoveOffScreen(cast);
             }
             videoService.CloseWindow();
         }
