@@ -94,7 +94,7 @@ namespace Unit04.Game.Directing
                 {
                     FallingObject obj = (FallingObject) actor;
                     int value = obj.GetValue();
-                    // scoreBoard.AddPoints(value);
+                    scoreBoard.AddPoints(value);
 
                     removeArtifacts.Add(obj);
                 }

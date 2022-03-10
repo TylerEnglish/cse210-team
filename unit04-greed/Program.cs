@@ -55,31 +55,11 @@ namespace Unit04
             // load the messages
             //List<string> messages = File.ReadAllLines(DATA_PATH).ToList<string>();
 
-            // // create the artifacts
-            // Random random = new Random();
-            // for (int i = 0; i < DEFAULT_ARTIFACTS; i++)
-            // {
-            //     string text = ((char)random.Next(33, 126)).ToString();
-            //     //string message = messages[i];
-
-            //     int x = random.Next(1, COLS);
-            //     int y = random.Next(1, ROWS);
-            //     Point position = new Point(x, y);
-            //     position = position.Scale(CELL_SIZE);
-
-            //     int r = random.Next(0, 256);
-            //     int g = random.Next(0, 256);
-            //     int b = random.Next(0, 256);
-            //     Color color = new Color(r, g, b);
-
-            //     Artifact artifact = new Artifact();
-            //     artifact.SetText(text);
-            //     artifact.SetFontSize(FONT_SIZE);
-            //     artifact.SetColor(color);
-            //     artifact.SetPosition(position);
-            //     //artifact.SetMessage(message);
-            //     cast.AddActor("artifacts", artifact);
-            // }
+            ScoreBoard scoreboard = new ScoreBoard();
+            scoreboard.SetFontSize(FONT_SIZE);
+            scoreboard.SetColor(WHITE);
+            scoreboard.SetPosition(new Point(CELL_SIZE, 0));
+            cast.AddActor("scoreBoard", scoreboard);
 
             // start the game
             KeyboardService keyboardService = new KeyboardService(CELL_SIZE);
