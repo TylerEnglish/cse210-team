@@ -16,9 +16,10 @@ namespace Unit05.Game.Casting
         /// <summary>
         /// Constructs a new instance of a Snake.
         /// </summary>
-        public Snake(int x)
+        public Snake(int x, Color color)
         {
             PrepareBody(x);
+            colorY = color;
         }
 
         /// <summary>
