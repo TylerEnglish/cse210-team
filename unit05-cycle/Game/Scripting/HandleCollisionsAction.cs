@@ -70,6 +70,7 @@ namespace Unit05.Game.Scripting
                 if (segment.GetPosition().Equals(head.GetPosition()))
                 {
                     isGameOver = true;
+
                 }
             }
         }
@@ -96,6 +97,7 @@ namespace Unit05.Game.Scripting
                 foreach (Actor segment in segments)
                 {
                     segment.SetColor(Constants.WHITE);
+                    snake.SetColor(Constants.WHITE);
                 }
                 // food.SetColor(Constants.WHITE);
             }
