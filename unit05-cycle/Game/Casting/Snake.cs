@@ -11,6 +11,7 @@ namespace Unit05.Game.Casting
     public class Snake : Actor
     {
         private List<Actor> segments = new List<Actor>();
+        string color;
 
         /// <summary>
         /// Constructs a new instance of a Snake.
@@ -64,7 +65,7 @@ namespace Unit05.Game.Casting
                 segment.SetPosition(position);
                 segment.SetVelocity(velocity);
                 segment.SetText("#");
-                segment.SetColor(Constants.GREEN);
+                segment.SetColor(this.color);
                 segments.Add(segment);
             }
         }
