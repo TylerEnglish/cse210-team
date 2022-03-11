@@ -84,6 +84,8 @@ namespace Unit05.Game.Casting
                 Point velocity = previous.GetVelocity();
                 trailing.SetVelocity(velocity);
             }
+            GrowTail(1);
+
         }
 
         /// <summary>
