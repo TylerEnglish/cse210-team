@@ -85,6 +85,23 @@ namespace Unit05.Game.Scripting
 
                 }
             }
+            
+            foreach (Actor segment in body)
+            {
+                if (segment.GetPosition().Equals(head2.GetPosition()))
+                {
+                    isGameOver = true;
+
+                }
+            }
+            foreach (Actor segment2 in body2)
+            {
+                if (segment2.GetPosition().Equals(head.GetPosition()))
+                {
+                    isGameOver = true;
+
+                }
+            }
         }
 
         private void HandleGameOver(Cast cast)
@@ -120,6 +137,7 @@ namespace Unit05.Game.Scripting
                     segment2.SetColor(Constants.WHITE);
                     snake2.SetColor(Constants.WHITE);
                 }
+                
 
                 // food.SetColor(Constants.WHITE);
             }

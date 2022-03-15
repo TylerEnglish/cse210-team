@@ -24,7 +24,7 @@ namespace Unit05
             Color colorR = new Color(255, 0, 0);
             cast.AddActor("snake", new Snake(200, colorG));
             cast.AddActor("score", new Score());
-            cast.AddActor("snake", new Snake(600, colorR));
+            cast.AddActor("snake", new Snake(605, colorR));
             
 
             // create the services
