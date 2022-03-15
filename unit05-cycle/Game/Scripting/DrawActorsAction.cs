@@ -24,14 +24,18 @@ namespace Unit05.Game.Scripting
         /// <inheritdoc/>
         public void Execute(Cast cast, Script script)
         {
-            Snake snake = (Snake)cast.GetFirstActor("snake");
-            List<Actor> segments = snake.GetSegments();
+            List<Actor> snakes = cast.GetActors("snake");
+            Snake snake1 = (Snake) snakes[0];
+            Snake snake2 = (Snake) snakes[1];
+            List<Actor> segments = snake1.GetSegments();
+            List<Actor> segments2 = snake2.GetSegments();
             Actor score = cast.GetFirstActor("score");
             // Actor food = cast.GetFirstActor("food");
             List<Actor> messages = cast.GetActors("messages");
             
             videoService.ClearBuffer();
             videoService.DrawActors(segments);
+            videoService.DrawActors(segments2);
             videoService.DrawActor(score);
             // videoService.DrawActor(food);
             videoService.DrawActors(messages);

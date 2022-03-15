@@ -1,6 +1,6 @@
 using Unit05.Game.Casting;
 using Unit05.Game.Services;
-
+using System.Collections.Generic;
 
 namespace Unit05.Game.Scripting
 {
@@ -14,6 +14,8 @@ namespace Unit05.Game.Scripting
     {
         private KeyboardService keyboardService;
         private Point direction = new Point(0, -1 * Constants.CELL_SIZE);
+        private Point direction2 = new Point(0, -1 * Constants.CELL_SIZE);
+
 
         /// <summary>
         /// Constructs a new instance of ControlActorsAction using the given KeyboardService.
@@ -49,10 +51,36 @@ namespace Unit05.Game.Scripting
             {
                 direction = new Point(0, Constants.CELL_SIZE);
             }
+            // Snake 2
+            // left
+            if (keyboardService.IsKeyDown("j"))
+            {
+                direction2 = new Point(-Constants.CELL_SIZE, 0);
+            }
 
-            Snake snake = (Snake)cast.GetFirstActor("snake");
-            snake.TurnHead(direction);
+            // right
+            if (keyboardService.IsKeyDown("l"))
+            {
+                direction2 = new Point(Constants.CELL_SIZE, 0);
+            }
 
+            // up
+            if (keyboardService.IsKeyDown("i"))
+            {
+                direction2 = new Point(0, -Constants.CELL_SIZE);
+            }
+
+            // down
+            if (keyboardService.IsKeyDown("k"))
+            {
+                direction2 = new Point(0, Constants.CELL_SIZE);
+            }
+            // Snake snake = (Snake)cast.GetFirstActor("snake");
+            List<Actor> snakes = cast.GetActors("snake");
+            Snake snake1 = (Snake) snakes[0];
+            Snake snake2 = (Snake) snakes[1];
+            snake1.TurnHead(direction);
+            snake2.TurnHead(direction2);
         }
     }
 }
