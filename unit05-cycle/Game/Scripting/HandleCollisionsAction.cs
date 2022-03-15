@@ -61,13 +61,25 @@ namespace Unit05.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
-            Snake snake = (Snake)cast.GetFirstActor("snake");
-            Actor head = snake.GetHead();
-            List<Actor> body = snake.GetBody();
+            List<Actor> snakes = cast.GetActors("snake");
+            Snake snake1 = (Snake) snakes[0];
+            Snake snake2 = (Snake) snakes[1];
+            Actor head = snake1.GetHead();
+            List<Actor> body = snake1.GetBody();
+            Actor head2 = snake2.GetHead();
+            List<Actor> body2 = snake2.GetBody();
 
             foreach (Actor segment in body)
             {
                 if (segment.GetPosition().Equals(head.GetPosition()))
+                {
+                    isGameOver = true;
+
+                }
+            }
+            foreach (Actor segment2 in body2)
+            {
+                if (segment2.GetPosition().Equals(head2.GetPosition()))
                 {
                     isGameOver = true;
 
@@ -79,8 +91,11 @@ namespace Unit05.Game.Scripting
         {
             if (isGameOver == true)
             {
-                Snake snake = (Snake)cast.GetFirstActor("snake");
-                List<Actor> segments = snake.GetSegments();
+            List<Actor> snakes = cast.GetActors("snake");
+            Snake snake1 = (Snake) snakes[0];
+            Snake snake2 = (Snake) snakes[1];
+            List<Actor> segments = snake1.GetSegments();
+            List<Actor> segments2 = snake2.GetSegments();
                 // Food food = (Food)cast.GetFirstActor("food");
 
                 // create a "game over" message
@@ -97,8 +112,15 @@ namespace Unit05.Game.Scripting
                 foreach (Actor segment in segments)
                 {
                     segment.SetColor(Constants.WHITE);
-                    snake.SetColor(Constants.WHITE);
+                    snake1.SetColor(Constants.WHITE);
                 }
+
+                foreach (Actor segment2 in segments2)
+                {
+                    segment2.SetColor(Constants.WHITE);
+                    snake2.SetColor(Constants.WHITE);
+                }
+
                 // food.SetColor(Constants.WHITE);
             }
         }
